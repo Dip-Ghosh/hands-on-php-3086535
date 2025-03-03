@@ -17,8 +17,24 @@ function flip() {
 	return ( 0 == rand(0,1) ) ? 'H' : 'T';
 }
 
+$flip = [
+'H' => 0,
+'T' => 0
+];
+
+	$flip = [
+		'H' => 0,
+		'T' => 0
+	];
+
+	for ($i = 0; $i < 1000; $i++) {
+		$flip[flip()]++;
+	}
+
+
+
 ?>
 
 <div class="coin">
-	<?php echo flip(); ?>
+	<?php 	echo "head was flipped " . $flip['H'] / 10 . " tails " .  $flip['T'] / 10;; ?>
 </div>
